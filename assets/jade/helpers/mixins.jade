@@ -1,0 +1,38 @@
+mixin img-100(img,alt)
+  img.w-100(src="assets/images/"+img,alt=alt)
+
+mixin img(img,alt)
+  img(src="assets/images/"+img,alt=alt)
+
+mixin service(img,alt,h6)
+  .carrito.pt-60
+    .img-carrito.text-center
+      +img(img,alt)
+    .desc-carrito
+      h6=h6
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum magnam, nesciunt expedita! Inventore corporis animi fugiat, blanditiis maiores odit itaque!
+
+mixin profile(name,puesto)
+  .profile
+    h5
+      strong=name
+    small=puesto
+    p  Lorem dipisicing elit. Repellat minus sequi, debitis vitae quibusdam sapiente at iure veritatis quos quo soluta natus rerum eligendi alias    
+
+mixin pricing(plan,precio,users,pages,gb,emails)
+  .pricing.bg-grey.text-center
+    h4=plan
+    h5=precio
+    .block-left
+      +img('man88.png','pc')
+      p=users+ ' USERs'
+    .block-right
+      +img('rectangles29.png','pc')
+      p=pages+ ' PAGES'
+    .block-left
+      +img('database22.png','pc')
+      p=gb+ ' GB STORAGE'
+    .block-right
+      +img('email162.png','pc')
+      p=emails+ ' EMAILS'
+    a(href="",class="btn-order white") ORDER NOW

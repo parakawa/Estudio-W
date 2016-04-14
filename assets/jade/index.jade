@@ -1,0 +1,16 @@
+include helpers/variables
+include helpers/mixins
+doctype html
+html(lang="en")
+	head
+		include base/head
+	body
+		include base/header
+		include sections/services
+		include sections/welcome
+		include sections/team
+		include sections/offers
+		include sections/contact
+		include base/footer
+	script(type='text/javascript', src='assets/js/jquery.js')
+	script(type='text/javascript', src='assets/js/bootstrap.min.js')
